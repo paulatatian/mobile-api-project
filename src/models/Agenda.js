@@ -1,4 +1,4 @@
-@'
+
 const { DataTypes } = require("sequelize");
 const sequelize = require("../database/connection");
 
@@ -29,4 +29,3 @@ const Agenda = sequelize.define("Agenda", {
 });
 
 module.exports = Agenda;
-'@ | Out-File -Encoding utf8 Agenda.js

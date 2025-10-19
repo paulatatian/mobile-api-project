@@ -1,4 +1,4 @@
-@'
+
 const { DataTypes } = require("sequelize");
 const sequelize = require("../database/connection");
 
@@ -35,4 +35,4 @@ const Facturacion = sequelize.define("Facturacion", {
 });
 
 module.exports = Facturacion;
-'@ | Out-File -Encoding utf8 Facturacion.js
+

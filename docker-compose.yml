@@ -1,20 +1,13 @@
-version: '3.8'
-
 services:
-  # Nombre del servicio
   api:
-    # Construir la imagen usando el Dockerfile en el directorio actual
     build: .
-    # Mapear el puerto 3000 del host al puerto 3000 del contenedor
     ports:
       - "3000:3000"
-    # Volúmenes para desarrollo: sincroniza el código local con el del contenedor
-    # Esto permite ver los cambios sin tener que reconstruir la imagen
     volumes:
-      - ./src:/usr/src/app/src
-      - ./database.sqlite:/usr/src/app/database.sqlite
-    # Variables de entorno
+      - sqlite_data:/usr/src/app/database  # Solo la BD persistente
     environment:
       - NODE_ENV=development
-    # Comando para ejecutar en modo desarrollo con nodemon
-    command: npm run dev
+    command: npm start
+
+volumes:
+  sqlite_data:

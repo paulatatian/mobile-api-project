@@ -1,4 +1,4 @@
-@'
+
 const { DataTypes } = require("sequelize");
 const sequelize = require("../database/connection");
 
@@ -28,4 +28,3 @@ const Class = sequelize.define("Class", {
 });
 
 module.exports = Class;
-'@ | Out-File -Encoding utf8 Class.js
