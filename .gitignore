@@ -1,0 +1,20 @@
+# Node
+node_modules/
+
+# Gradle
+.gradle/
+build/
+*/build/
+gradlew
+gradlew.bat
+
+# Sistema
+.DS_Store
+thumbs.db
+
+# VS Code
+.vscode/
+.history/
+
+# Archivos de entorno
+.env
